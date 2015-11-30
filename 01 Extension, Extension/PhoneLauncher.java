@@ -4,10 +4,10 @@ public class PhoneLauncher {
 
 		PhoneLauncher launcher = new PhoneLauncher();
 		launcher.launch();
-
 	}
 
 	public void launch() {
+		System.out.println("Launch!");
 		// your code creating and using SmartPhone here...
 	}
 
