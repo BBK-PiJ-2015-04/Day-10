@@ -11,18 +11,22 @@ public class MobilePhone extends OldPhone {
 	@Override
 	public void call(String number) {
 		super.call(number);
-		int i = 0;
-		while(!lastTenNumbers[i].equals("Empty") || i < 10) {
-			i++;
+		int counter = 0;
+		for(int i = 0; i < 10; i++) {
+			if(lastTenNumbers[i].equals("Empty")) {
+				counter = i;
+				break;
+			}
+			counter = i;
 		}
-		if(i == 9) {
-			for(int j = 0; j < 9; j++) {
-				lastTenNumbers[j] = lastTenNumbers[j + 1];
+		if(counter == 9 && !lastTenNumbers[9].equals("Empty")) {
+			for(int i = 0; i < 9; i++) {
+				lastTenNumbers[i] = lastTenNumbers[i + 1];
 			}
 			lastTenNumbers[9] = number;
 		}
 		else {
-			lastTenNumbers[i] = number;
+			lastTenNumbers[counter] = number;
 		}
 	}
 	
@@ -35,12 +39,10 @@ public class MobilePhone extends OldPhone {
 	}
 	
 	public void printLastNumbers() {
-		int i = 0;
-		while(!lastTenNumbers[i].equals("Empty") || i < 10) {
-			i++;
-		}
-		for (int j = 0; i <= i; j++) {
-			System.out.println(lastTenNumbers[j]);
+		for (int i = 0; i < 10; i++) {
+			if(!lastTenNumbers[i].equals("Empty")) {
+				System.out.println(lastTenNumbers[i]);
+			}
 		}
 	}
 
