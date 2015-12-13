@@ -13,13 +13,21 @@ public class PhoneLauncher {
 		SmartPhone iPhone = new SmartPhone();
 		
 		iPhone.call("245-1111");
-		iPhone.call("245-1111");
-		iPhone.call("245-1234");
-		iPhone.call("245-1111");
-		iPhone.call("245-1111");
-		iPhone.call("1111");
+		iPhone.call("223-1134");
+		iPhone.call("445-1234");
+		iPhone.call("345-4431");
+		iPhone.call("451-3221");
+		iPhone.call("999");
+		
+		iPhone.ringAlarm("Alarm");
+		
+		iPhone.playGame("Game!");
+		
 		iPhone.printLastNumbers();
 		
+		iPhone.browseWeb("Web time!");
+		
+		iPhone.findPosition();
 		
 	}
 
