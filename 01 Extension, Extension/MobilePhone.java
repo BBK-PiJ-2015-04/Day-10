@@ -2,22 +2,27 @@ public class MobilePhone extends OldPhone {
 	
 	private String[] lastTenNumbers = new String[10];
 	
+	public MobilePhone() {
+		for(int i = 0; i < 10; i++) {
+			lastTenNumbers[i] = "Empty";
+		}
+	}
+	
 	@Override
 	public void call(String number) {
 		super.call(number);
-		int currentLength = lastTenNumbers.length;
-		if(currentLength == 10) {
-			String[] newNumbers = new String[10];
-			for(int i = 0; i < 9; i++) {
-				newNumbers[i] = lastTenNumbers[i + 1];
-			}
-			for(int i = 0; i < 9; i++) {
-				lastTenNumbers[i] = newNumbers[i];
+		int i = 0;
+		while(!lastTenNumbers[i].equals("Empty") || i < 10) {
+			i++;
+		}
+		if(i == 9) {
+			for(int j = 0; j < 9; j++) {
+				lastTenNumbers[j] = lastTenNumbers[j + 1];
 			}
 			lastTenNumbers[9] = number;
 		}
 		else {
-			lastTenNumbers[currentLength - 1] = number;
+			lastTenNumbers[i] = number;
 		}
 	}
 	
@@ -30,8 +35,12 @@ public class MobilePhone extends OldPhone {
 	}
 	
 	public void printLastNumbers() {
-		for (int i = 0; i < 10; i++) {
-			System.out.println(lastTenNumbers[i]);
+		int i = 0;
+		while(!lastTenNumbers[i].equals("Empty") || i < 10) {
+			i++;
+		}
+		for (int j = 0; i <= i; j++) {
+			System.out.println(lastTenNumbers[j]);
 		}
 	}
 

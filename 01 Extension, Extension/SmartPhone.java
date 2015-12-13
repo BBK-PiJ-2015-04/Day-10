@@ -9,5 +9,5 @@ public class SmartPhone extends MobilePhone {
 		System.out.println("Latitude: 51 degrees North");
 		System.out.println("Longitude: 1 degree West");
 	}
-	
+
 }
