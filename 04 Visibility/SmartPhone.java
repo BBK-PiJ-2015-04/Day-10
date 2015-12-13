@@ -21,5 +21,9 @@ public class SmartPhone extends MobilePhone {
 		System.out.println("Latitude: 51 degrees North");
 		System.out.println("Longitude: 1 degree West");
 	}
+	
+	public void playGame(String number) {
+		System.out.println("Play game " + number + "...");
+	}
 
 }
