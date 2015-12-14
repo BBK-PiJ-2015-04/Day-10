@@ -23,8 +23,8 @@ public class SmartPhone extends MobilePhone {
 	}
 	
 	// My solution below! Copy the whole darn thing!
-		@Override
-		public void playGame(String number) {
+	@Override
+	public void playGame(String number) {
 		System.out.println("Play game " + number + "...");
 	}
 
