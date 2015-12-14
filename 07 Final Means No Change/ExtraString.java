@@ -2,7 +2,9 @@ public class ExtraString extends String {
 	
 	public void printEven() {
 		
-		int i = 0;
+		// This class String is final and so if we try to extended it
+		// as is the case here, then the complier will refuse to compile
+		// it.
 		
 	}
 	
