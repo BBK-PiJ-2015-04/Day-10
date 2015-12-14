@@ -22,10 +22,9 @@ public class SmartPhone extends MobilePhone {
 		System.out.println("Longitude: 1 degree West");
 	}
 	
-	// My solution below! Copy the whole darn thing!
-		@Override
-		public void playGame(String number) {
-		System.out.println("Play game " + number + "...");
+	@Override
+	private void playGame(String number) {
+		// Children cannot play games!
 	}
 
 }
